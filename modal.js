@@ -22,6 +22,7 @@ function launchModal() {
 }
 
 
+
 const closeModal = document.querySelectorAll(".close");
 
 // close modal event
@@ -175,7 +176,7 @@ function checkboxCheck(){
   
 }
 
-
+//confirmation modal and message
 
 const formConfirmationTest = document.getElementById("form");
 formConfirmationTest.addEventListener('click', modalCloseConfirmation);
@@ -190,4 +191,14 @@ function modalCloseConfirmation(){
       document.getElementById("confirm-bground").style.display = "block";
     }
 
+}
+
+//confirmation modal closed
+
+const confirmModalbg = document.getElementById("confirm-bground");
+
+closeModal.forEach((btn) => btn.addEventListener("click", confirmModalClosed));
+
+function confirmModalClosed(){
+  confirmModalbg.style.display = "none";
 }
