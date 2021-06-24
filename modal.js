@@ -34,6 +34,7 @@ function modalClosed() {
 }
 
 
+//Eléments DOM:
 
 const firstNameCheck = document.getElementById("first");
 const lastNameCheck = document.getElementById("last");
@@ -43,7 +44,6 @@ const quantityCheck = document.getElementById("quantity");
 
 
 //form verification 
-//keep data after submit
 
 const formValidate = document.getElementById("formSubmit");
 
@@ -60,9 +60,6 @@ function validate(event){
   birthCheck(); 
 
 }
-
-
-
 
 //first and last name verification
 
@@ -89,7 +86,6 @@ function lastNameValidation(){
       return false
     }
 }
-
 
 //Email verification
 
@@ -143,7 +139,6 @@ function contestNumberCheck(){
 const radios = document.querySelectorAll(".checkbox-input[type=radio]");
 
 function locationCheck(){
-  let radios = document.querySelectorAll(".checkbox-input[type=radio]");
   for(let radio of radios){
     if(radio.checked){
     document.getElementById('radioError').innerHTML = ' ';
@@ -161,7 +156,6 @@ function locationCheck(){
 const checkboxCondition = document.getElementById('checkbox1');
 
 function checkboxCheck(){
-  let checkboxCondition = document.getElementById('checkbox1');
   if (!checkboxCondition.checked){
     document.getElementById('checkboxError').innerHTML = 'Veuillez accepter les conditions';
     document.getElementById('checkboxError').style.color = "red";
